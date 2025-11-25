@@ -53,7 +53,7 @@ class PresenterPembalap implements KontrakPresenter
         if ($id !== null) {
             $data = $this->tabelPembalap->getPembalapById($id);
         }
-        return $this->viewPembalap->tampilkanFormPembalap($data);
+        return $this->viewPembalap->tampilFormPembalap($data);
     }
 
     // IMPLEMENTASI LOGIC CRUD
