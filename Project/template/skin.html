@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pembalap MVP</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 20px; margin: 0; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+        
+        .nav-bar { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #eee; }
+        .nav-bar a { text-decoration: none; color: #555; margin-right: 15px; font-weight: bold; font-size: 16px; }
+        .nav-bar a:hover, .nav-bar a.active { color: #007bff; }
+        .nav-bar span { margin-right: 15px; color: #aaa; }
+
+        h1 { margin-top: 0; color: #333; }
+        
+        .btn { display: inline-block; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 14px; border: none; cursor: pointer; transition: background 0.3s; }
+        .btn-add { background-color: #007bff; color: white; margin-bottom: 15px; }
+        .btn-add:hover { background-color: #0056b3; }
+        .btn-edit { background-color: #ffc107; color: black; font-weight: bold; margin-right: 5px; }
+        .btn-delete { background-color: #dc3545; color: white; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f1f1f1; font-weight: bold; color: #333; }
+        tr:hover { background-color: #f9f9f9; }
+        
+        .footer-info { margin-top: 20px; font-size: 14px; color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-bar">
+        <span>APP BALAPAN</span>
+        <a href="index.php?modul=pembalap">Data Pembalap</a>
+        <a href="index.php?modul=sirkuit">Data Sirkuit</a>
+    </div>
+
+    <h1>Daftar Klasemen Pembalap</h1>
+    
+    <a href="index.php?modul=pembalap&screen=add" class="btn btn-add">+ Tambah Data Baru</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th width="50">No</th>
+                <th>Nama</th>
+                <th>Tim</th>
+                <th>Negara</th>
+                <th>Poin</th>
+                <th>Menang</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            DATA_TABEL
+            
+        </tbody>
+    </table>
+
+    <div class="footer-info">
+        Total: DATA_TOTAL Data Pembalap
+    </div>
+</div>
+
+</body>
+</html>

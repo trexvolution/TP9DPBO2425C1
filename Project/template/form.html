@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembalap</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; padding: 40px 0; margin: 0; }
+        .form-container { background: #fff; padding: 30px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; margin-bottom: 20px; color: #333; text-align: center; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+        
+        /* Styling Input */
+        input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        input:focus { border-color: #007bff; outline: none; }
+        
+        .btn-group { margin-top: 25px; display: flex; justify-content: space-between; }
+        .btn-submit { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; flex: 1; margin-right: 10px;}
+        .btn-submit:hover { background: #218838; }
+        .btn-cancel { background: #6c757d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 15px; text-align: center; }
+        .btn-cancel:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Form Data Pembalap</h2>
+    
+    <form action="index.php?modul=pembalap" method="POST">
+        
+        <input type="hidden" name="action" value="add" id="pembalap-action">
+        <input type="hidden" name="id" value="" id="pembalap-id">
+
+        <div class="form-group">
+            <label>Nama Pembalap</label>
+            <input id="nama" name="nama" type="text" placeholder="Nama pembalap" required>
+        </div>
+
+        <div class="form-group">
+            <label>Nama Tim</label>
+            <input id="tim" name="tim" type="text" placeholder="Nama tim" required>
+        </div>
+
+        <div class="form-group">
+            <label>Negara Asal</label>
+            <input id="negara" name="negara" type="text" placeholder="Negara (mis. Indonesia)" required>
+        </div>
+
+        <div class="form-group">
+            <label>Poin Musim Ini</label>
+            <input id="poinMusim" name="poinMusim" type="number" min="0" step="1" placeholder="0" required>
+        </div>
+
+        <div class="form-group">
+            <label>Jumlah Kemenangan</label>
+            <input id="jumlahMenang" name="jumlahMenang" type="number" min="0" step="1" placeholder="0" required>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn-submit">Simpan Data</button>
+            <a href="index.php?modul=pembalap" class="btn-cancel">Batal</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
